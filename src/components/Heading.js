@@ -24,8 +24,8 @@ const slider = (
 			<p>se</p>
 		</div>
 		<div data-src={require('../images/slider3.jpg')}>
-			<p>czas na twój ruch</p>
-			<p>se</p>
+			<p>siemanko</p>
+			<p>witam w mojej kuchni</p>
 		</div>
 	</AutoplaySlider>
 );
