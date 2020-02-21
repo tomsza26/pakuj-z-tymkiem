@@ -8,8 +8,12 @@ function Footer() {
 		<footer>
 			<div id="footerBackground">
 				<div id="footerCallCon">
-					<div id="footerCallText">ZADZWOŃ TERAZ</div>
-					<div id="footerCallNumber">665 628 680</div>
+					<div id="footerCallText" data-aos="fade-up" data-aos-duration="2500" data-aos-once="true">
+						ZADZWOŃ TERAZ
+					</div>
+					<div id="footerCallNumber" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+						665 628 680
+					</div>
 				</div>
 			</div>
 			<div id="footerContent">

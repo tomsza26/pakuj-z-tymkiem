@@ -13,9 +13,14 @@ class Blog extends React.Component {
 		return (
 			<section id="blog">
 				<header id="blogHeader">BLOG</header>
+
+				<div id="headerContainer">
+					<div className="blogContentHeader1">najnowsze artykuły</div>
+					<div className="blogContentHeader">szybki start</div>
+				</div>
+
 				<div id="blogContainer">
-					<div id="blogButtonsContainer">
-						<div className="blogContentHeader">szybki start</div>
+					<div id="blogButtonsContainer" data-aos="fade-right" data-aos-duration="2500" data-aos-once="true">
 						<a href="" className="blogButton">
 							dieta
 						</a>
@@ -35,53 +40,50 @@ class Blog extends React.Component {
 							plany treningowe
 						</a>
 					</div>
-					<div id="blogContent">
-						<div className="blogContentHeader">najnowsze artykuły</div>
-						<div id="blogArticlesContainer">
-							<a href="" target="_blank" className="blogArticle">
-								<div className="blogArticleCategory">rozwój osobisty</div>
-								<div className="blogArticleHeader">nagłówek jest masno</div>
-								<div className="blogArticleContent">
-									{this.shorten(
-										'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
-										300
-									)}
-								</div>
-								<div className="blogArticleDate">
-									<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-									<FontAwesomeIcon icon={faExternalLinkAlt} />
-								</div>
-							</a>
-							<a href="" target="_blank" className="blogArticle">
-								<div className="blogArticleCategory">rozwój osobisty</div>
-								<div className="blogArticleHeader">nagłówek jest masno</div>
-								<div className="blogArticleContent">
-									{this.shorten(
-										'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
-										300
-									)}
-								</div>
-								<div className="blogArticleDate">
-									<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-									<FontAwesomeIcon icon={faExternalLinkAlt} />
-								</div>
-							</a>
-							<a href="" target="_blank" className="blogArticle">
-								<div className="blogArticleCategory">rozwój osobisty</div>
-								<div className="blogArticleHeader">nagłówek jest masno</div>
-								<div className="blogArticleContent">
-									{this.shorten(
-										'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
-										300
-									)}
-								</div>
-								<div className="blogArticleDate">
-									<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-									<FontAwesomeIcon icon={faExternalLinkAlt} />
-								</div>
-							</a>
+					<div id="blogContentHeader2">najnowsze artykuły</div>
+
+					<a href="" target="_blank" className="blogArticle">
+						<div className="blogArticleCategory">rozwój osobisty</div>
+						<div className="blogArticleHeader">nagłówek jest masno</div>
+						<div className="blogArticleContent">
+							{this.shorten(
+								'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
+								300
+							)}
 						</div>
-					</div>
+						<div className="blogArticleDate">
+							<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
+							<FontAwesomeIcon icon={faExternalLinkAlt} />
+						</div>
+					</a>
+					<a href="" target="_blank" className="blogArticle">
+						<div className="blogArticleCategory">rozwój osobisty</div>
+						<div className="blogArticleHeader">nagłówek jest masno</div>
+						<div className="blogArticleContent">
+							{this.shorten(
+								'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
+								300
+							)}
+						</div>
+						<div className="blogArticleDate">
+							<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
+							<FontAwesomeIcon icon={faExternalLinkAlt} />
+						</div>
+					</a>
+					<a href="" target="_blank" className="blogArticle">
+						<div className="blogArticleCategory">rozwój osobisty</div>
+						<div className="blogArticleHeader">nagłówek jest masno</div>
+						<div className="blogArticleContent">
+							{this.shorten(
+								'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
+								300
+							)}
+						</div>
+						<div className="blogArticleDate">
+							<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
+							<FontAwesomeIcon icon={faExternalLinkAlt} />
+						</div>
+					</a>
 				</div>
 			</section>
 		);

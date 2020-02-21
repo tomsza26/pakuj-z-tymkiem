@@ -5,9 +5,10 @@ function AboutMe() {
 	return (
 		<article id="aboutMe">
 			<div id="aboutMeContainer">
-				<div id="aboutMeTextContainer">
+				<div id="aboutMeTextContainer" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">
 					<div id="aboutMeName">Tymek Nowak</div>
 					<div id="aboutMeTrener">TRENER PERSONALNY</div>
+					<img id="aboutPic1" src={require('../images/aboutMeCircle.png')} alt="image" />
 					<div id="aboutMeContent">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique ligula vel mollis
 						finibus. Ut et viverra lacus, convallis pulvinar lorem. Nulla facilisi. Sed sed urna nec felis
@@ -25,7 +26,14 @@ function AboutMe() {
 						CZYTAJ WIĘCEJ
 					</a>
 				</div>
-				<img src={require('../images/aboutMeCircle.png')} alt="image" />
+				<img
+					id="aboutPic2"
+					src={require('../images/aboutMeCircle.png')}
+					alt="image"
+					data-aos="fade-left"
+					data-aos-duration="3000"
+					data-aos-once="true"
+				/>
 			</div>
 		</article>
 	);

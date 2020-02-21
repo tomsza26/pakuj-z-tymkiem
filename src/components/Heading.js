@@ -1,11 +1,13 @@
 import React from 'react';
 import '../App.scss';
 import Logo from '../images/LogoV1.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSortDown } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -31,12 +33,60 @@ const slider = (
 );
 
 class Heading extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			containerName: 'container'
+		};
+	}
+
+	clicked = () => {
+		if (this.state.containerName === 'container') {
+			this.setState({
+				containerName: 'container change'
+			});
+
+			let items = document.querySelectorAll('.a');
+			items.forEach((userItem) => {
+				userItem.style.display = 'grid';
+			});
+		} else {
+			this.setState({
+				containerName: 'container'
+			});
+
+			let items = document.querySelectorAll('.a');
+			items.forEach((userItem) => {
+				userItem.style.display = 'none';
+			});
+		}
+	};
+
 	render() {
 		return (
 			<React.Fragment>
+				<div id="telephone">
+					zadzwoń:{' '}
+					<a id="number" href="tel:+48-665-628-680">
+						+48 665 628 680
+					</a>
+				</div>
 				<header>
 					<Logo />
-					<nav>
+					<nav
+						id="topNav"
+						className="topNavigation"
+						data-aos="fade-down"
+						data-aos-duration="2000"
+						data-aos-once="true"
+					>
+						<span id="menuText">MENU</span>
+						<div className={this.state.containerName} onClick={this.clicked}>
+							<div className="bar1" />
+							<div className="bar2" />
+							<div className="bar3" />
+						</div>
 						<a className="a" href="">
 							strona główna
 						</a>
@@ -50,17 +100,11 @@ class Heading extends React.Component {
 							metamorfozy
 						</a>
 						<a className="a" href="">
-							oferta<FontAwesomeIcon icon={faSortDown} />
+							oferta
 						</a>
 						<a className="a" href="">
 							kontakt
 						</a>
-						<div id="telephone">
-							zadzwoń:{' '}
-							<a id="number" href="tel:+48-665-628-680">
-								+48 665 628 680
-							</a>
-						</div>
 					</nav>
 				</header>
 				{slider}
