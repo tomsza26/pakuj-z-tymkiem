@@ -95,7 +95,7 @@ header {
 	svg {
 		padding: 0 20px 0 30px;
 		width: 600px;
-		height: auto !important;
+		height: auto;
 		grid-column: 1/2;
 	}
 
@@ -989,6 +989,8 @@ footer {
 		svg {
 			padding: 20px 0 0 0;
 			margin: 0 auto;
+			height: 30vw;
+			width: auto;
 		}
 
 		nav {
