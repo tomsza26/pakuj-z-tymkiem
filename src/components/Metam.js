@@ -1,7 +1,7 @@
 import React from 'react';
-import '../App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Metam() {
 	return (
@@ -12,14 +12,14 @@ function Metam() {
 					<div className="metaArticle">
 						<img
 							src={require('../images/aboutMe.jpg')}
-							alt="image"
+							alt="metamorfoza"
 							data-aos="flip-right"
 							data-aos-duration="2500"
 							data-aos-once="true"
 						/>
 						<img
 							src={require('../images/aboutMe.jpg')}
-							alt="image"
+							alt="metamorfoza"
 							data-aos="flip-left"
 							data-aos-duration="2500"
 							data-aos-once="true"
@@ -47,14 +47,14 @@ function Metam() {
 					<div className="metaArticle">
 						<img
 							src={require('../images/aboutMe.jpg')}
-							alt="image"
+							alt="metamorfoza"
 							data-aos="flip-right"
 							data-aos-duration="3000"
 							data-aos-once="true"
 						/>
 						<img
 							src={require('../images/aboutMe.jpg')}
-							alt="image"
+							alt="metamorfoza"
 							data-aos="flip-left"
 							data-aos-duration="3000"
 							data-aos-once="true"
@@ -81,9 +81,11 @@ function Metam() {
 					</div>
 				</div>
 			</div>
-			<a href="" target="_blank" id="metaButton">
-				WIĘCEJ METAMORFOZ <FontAwesomeIcon icon={faExternalLinkAlt} />
-			</a>
+			<Link to="/metamorfozy">
+				<div id="metaButton">
+					WIĘCEJ METAMORFOZ <FontAwesomeIcon icon={faExternalLinkAlt} />
+				</div>
+			</Link>
 		</div>
 	);
 }

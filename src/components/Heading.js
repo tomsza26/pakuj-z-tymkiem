@@ -1,36 +1,6 @@
 import React from 'react';
-import '../App.scss';
 import Logo from '../images/LogoV1.js';
-import AwesomeSlider from 'react-awesome-slider';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
-import 'react-awesome-slider/dist/styles.scss';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
-
-const AutoplaySlider = withAutoplay(AwesomeSlider);
-
-const slider = (
-	<AutoplaySlider
-		play={true}
-		cancelOnInteraction={false} // should stop playing on user interaction
-		interval={8000}
-	>
-		<div data-src={require('../images/slider1.jpg')}>
-			<p>konsultacje on-line</p>
-			<p>pełna współpraca</p>
-		</div>
-		<div data-src={require('../images/slider2.jpg')}>
-			<p>dssds</p>
-			<p>se</p>
-		</div>
-		<div data-src={require('../images/slider3.jpg')}>
-			<p>siemanko</p>
-			<p>witam w mojej kuchni</p>
-		</div>
-	</AutoplaySlider>
-);
+import { Link } from 'react-router-dom';
 
 class Heading extends React.Component {
 	constructor(props) {
@@ -47,7 +17,7 @@ class Heading extends React.Component {
 				containerName: 'container change'
 			});
 
-			let items = document.querySelectorAll('.a');
+			let items = document.querySelectorAll('.b');
 			items.forEach((userItem) => {
 				userItem.style.display = 'grid';
 			});
@@ -56,7 +26,7 @@ class Heading extends React.Component {
 				containerName: 'container'
 			});
 
-			let items = document.querySelectorAll('.a');
+			let items = document.querySelectorAll('.b');
 			items.forEach((userItem) => {
 				userItem.style.display = 'none';
 			});
@@ -65,15 +35,15 @@ class Heading extends React.Component {
 
 	render() {
 		return (
-			<React.Fragment>
-				<div id="telephone">
-					zadzwoń:{' '}
-					<a id="number" href="tel:+48-665-628-680">
-						+48 665 628 680
-					</a>
-				</div>
-				<header>
-					<Logo />
+			<header>
+				<Logo data-aos="fade-up" data-aos-duration="2000" data-aos-once="true" />
+				<div id="navContainer">
+					<div id="telephone" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
+						zadzwoń:{' '}
+						<a id="number" href="tel:+48-665-628-680">
+							+48 665 628 680
+						</a>
+					</div>
 					<nav
 						id="topNav"
 						className="topNavigation"
@@ -87,28 +57,27 @@ class Heading extends React.Component {
 							<div className="bar2" />
 							<div className="bar3" />
 						</div>
-						<a className="a" href="">
-							strona główna
-						</a>
-						<a className="a" href="">
-							o mnie
-						</a>
-						<a className="a" href="">
-							blog
-						</a>
-						<a className="a" href="">
-							metamorfozy
-						</a>
-						<a className="a" href="">
-							oferta
-						</a>
-						<a className="a" href="">
+						<Link to="/" className="b">
+							<div className="a">strona główna</div>
+						</Link>
+						<Link to="/oMnie" className="b">
+							<div className="a">o mnie</div>
+						</Link>
+						<Link to="/blog" className="b">
+							<div className="a">blog</div>
+						</Link>
+						<Link to="/metamorfozy" className="b">
+							<div className="a">metamorfozy</div>
+						</Link>
+						<Link to="/wspolpraca" className="b">
+							<div className="a">współpraca</div>
+						</Link>
+						<a className="a" href="#footerBackground">
 							kontakt
 						</a>
 					</nav>
-				</header>
-				{slider}
-			</React.Fragment>
+				</div>
+			</header>
 		);
 	}
 }

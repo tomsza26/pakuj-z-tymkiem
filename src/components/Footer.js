@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
@@ -45,18 +44,42 @@ function Footer() {
 					<div id="footerMapContainer">
 						<div id="footerMap">
 							<div id="footerMapHeader">Aktualnie pracuję w: </div>
-							<iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuwbKviNbBEcRvWQliAw1SZc&key=AIzaSyBJX_FzAlIwwa6TMAIsQrWBFDVOpd_akto" />
+							<iframe
+								src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuwbKviNbBEcRvWQliAw1SZc&key=AIzaSyBJX_FzAlIwwa6TMAIsQrWBFDVOpd_akto"
+								title="iframeTymek"
+							/>
 						</div>
 						<div id="footerSocialContainer">
 							<div id="footerSocialHeader">Znajdziesz mnie na:</div>
 							<div id="footerIcons">
-								<a href="" target="_blank">
+								<a
+									href="/"
+									target="_blank"
+									rel="noopener noreferrer"
+									data-aos="zoom-in"
+									data-aos-duration="4000"
+									data-aos-once="true"
+								>
 									<FontAwesomeIcon icon={faFacebookF} color="#3b5999" />
 								</a>
-								<a href="" target="_blank">
+								<a
+									href="/"
+									target="_blank"
+									rel="noopener noreferrer"
+									data-aos="zoom-in"
+									data-aos-duration="4000"
+									data-aos-once="true"
+								>
 									<FontAwesomeIcon icon={faInstagram} color="#e4405f" />
 								</a>
-								<a href="" target="_blank">
+								<a
+									href="/"
+									target="_blank"
+									rel="noopener noreferrer"
+									data-aos="zoom-in"
+									data-aos-duration="4000"
+									data-aos-once="true"
+								>
 									<FontAwesomeIcon icon={faYoutube} color="#cd201f" />
 								</a>
 							</div>
@@ -66,7 +89,7 @@ function Footer() {
 						<section id="footerCopyright">&copy; 2020 - Wszelkie prawa zastrzeżone</section>
 						<section id="footerMakedBy">
 							Projekt i Realizacja:{' '}
-							<a href="https://tomsza26.github.io/portfolio/" target="_blank">
+							<a href="https://tomsza26.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
 								Tomasz Szablewski
 							</a>
 						</section>

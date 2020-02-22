@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.scss';
+import { Link } from 'react-router-dom';
 
 function AboutMe() {
 	return (
@@ -8,7 +8,7 @@ function AboutMe() {
 				<div id="aboutMeTextContainer" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true">
 					<div id="aboutMeName">Tymek Nowak</div>
 					<div id="aboutMeTrener">TRENER PERSONALNY</div>
-					<img id="aboutPic1" src={require('../images/aboutMeCircle.png')} alt="image" />
+					<img id="aboutPic1" src={require('../images/aboutMeCircle.png')} alt="about" />
 					<div id="aboutMeContent">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique ligula vel mollis
 						finibus. Ut et viverra lacus, convallis pulvinar lorem. Nulla facilisi. Sed sed urna nec felis
@@ -22,14 +22,16 @@ function AboutMe() {
 						quis rhoncus sem. Etiam molestie rutrum nisl, eget cursus purus ullamcorper et. Integer feugiat
 						enim quis ullamcorper congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
 					</div>
-					<a href="" id="aboutMeButton">
-						CZYTAJ WIĘCEJ
-					</a>
+					<Link to="/oMnie">
+						<div href="" id="aboutMeButton">
+							CZYTAJ WIĘCEJ
+						</div>
+					</Link>
 				</div>
 				<img
 					id="aboutPic2"
 					src={require('../images/aboutMeCircle.png')}
-					alt="image"
+					alt="about"
 					data-aos="fade-left"
 					data-aos-duration="3000"
 					data-aos-once="true"
