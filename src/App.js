@@ -9,7 +9,7 @@ import Pblog from './pages/Pblog';
 import Pglowna from './pages/Pglowna';
 import Pmetamorfozy from './pages/Pmetamorfozy';
 import Pwspolpraca from './pages/Pwspolpraca';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect, useHistory, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 AOS.init();
 

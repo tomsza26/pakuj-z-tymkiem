@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../images/LogoV1.js';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Heading extends React.Component {
 	constructor(props) {
@@ -21,6 +21,8 @@ class Heading extends React.Component {
 			items.forEach((userItem) => {
 				userItem.style.display = 'grid';
 			});
+
+			document.querySelector('#headContact').style.display = 'grid';
 		} else {
 			this.setState({
 				containerName: 'container'
@@ -30,6 +32,8 @@ class Heading extends React.Component {
 			items.forEach((userItem) => {
 				userItem.style.display = 'none';
 			});
+
+			document.querySelector('#headContact').style.display = 'none';
 		}
 	};
 
@@ -57,22 +61,50 @@ class Heading extends React.Component {
 							<div className="bar2" />
 							<div className="bar3" />
 						</div>
-						<Link to="/" className="b">
+						<NavLink to="/" className="b">
 							<div className="a">strona główna</div>
-						</Link>
-						<Link to="/oMnie" className="b">
+						</NavLink>
+						<NavLink
+							to="/oMnie"
+							className="b"
+							activeStyle={{
+								background: '#4831d4',
+								color: '#ccf381'
+							}}
+						>
 							<div className="a">o mnie</div>
-						</Link>
-						<Link to="/blog" className="b">
+						</NavLink>
+						<NavLink
+							to="/blog"
+							className="b"
+							activeStyle={{
+								background: '#4831d4',
+								color: '#ccf381'
+							}}
+						>
 							<div className="a">blog</div>
-						</Link>
-						<Link to="/metamorfozy" className="b">
+						</NavLink>
+						<NavLink
+							to="/metamorfozy"
+							className="b"
+							activeStyle={{
+								background: '#4831d4',
+								color: '#ccf381'
+							}}
+						>
 							<div className="a">metamorfozy</div>
-						</Link>
-						<Link to="/wspolpraca" className="b">
+						</NavLink>
+						<NavLink
+							to="/wspolpraca"
+							className="b"
+							activeStyle={{
+								background: '#4831d4',
+								color: '#ccf381'
+							}}
+						>
 							<div className="a">współpraca</div>
-						</Link>
-						<a className="a" href="#footerBackground">
+						</NavLink>
+						<a className="a" href="#footerBackground" id="headContact">
 							kontakt
 						</a>
 					</nav>

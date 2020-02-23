@@ -165,7 +165,7 @@ header {
 
 #aboutMe {
 	background: $firstColor;
-	padding: 30px;
+	padding: 30px 30px 50px 30px;
 	color: $secondColor;
 
 	#aboutMeContainer {
@@ -408,7 +408,7 @@ header {
 	}
 }
 
-#metamorfozy {
+.metamorfozy {
 	padding: 30px 30px 60px 30px;
 
 	a {
@@ -444,19 +444,19 @@ header {
 		}
 	}
 
-	#metaCont {
+	.metaCont {
 		max-width: 1000px;
 		margin: 0 auto;
 		color: $secondColor;
 
-		#metaHeader {
+		.metaHeader {
 			font-family: $font2;
 			font-weight: 700;
 			font-size: 40px;
 			margin-bottom: 15px;
 		}
 
-		#metaArticlesCont {
+		.metaArticlesCont {
 			display: flex;
 			align-items: flex-start;
 			align-content: flex-start;
@@ -534,7 +534,6 @@ header {
 }
 
 footer {
-	margin-top: 20px;
 	border-top: 3px solid $secondColor;
 
 	#footerBackground {
@@ -800,6 +799,232 @@ footer {
 	}
 }
 
+.PCont {
+	background: $secondColor;
+	color: $firstColor;
+
+	.PInner {
+		max-width: 1400px;
+		margin: 0 auto;
+		display: grid;
+		padding: 20px 0 20px 0;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 15px;
+
+		.PHeader {
+			font-family: "Krona One", sans-serif;
+			font-size: 35px;
+			font-weight: 700;
+			padding-bottom: 20px;
+			text-align: center;
+			grid-column: 1 / 3;
+			color: $firstColor;
+		}
+
+		#PblogText {
+			font-size: 20px;
+		}
+
+		#PblogImage {
+			img {
+				width: 500px;
+			}
+		}
+
+		.Pcoop {
+			font-weight: 700;
+		}
+	}
+
+	#Pblog {
+		max-width: 2000px;
+		color: $secondColor;
+
+		#PblogButtonsCont {
+			display: flex;
+			grid-column: 1 / 3;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 10px;
+
+			.PBlogButton {
+				margin: 0 5px 0 5px;
+				text-transform: uppercase;
+				color: $secondColor;
+				font-weight: 700;
+				font-size: 20px;
+				padding: 5px;
+				border: 3px solid $firstColor;
+				text-align: center;
+				background: $firstColor;
+				transition: 0.6s;
+			}
+
+			.PBlogButton:hover {
+				color: $firstColor;
+				background: $secondColor;
+				cursor: pointer;
+			}
+		}
+
+		.PblogArticlesCont {
+			grid-column: 1 / 3;
+			flex-wrap: wrap;
+			color: $firstColor;
+			display: flex;
+			justify-content: center;
+
+			.PblogArticle {
+				text-decoration: none;
+				border: 3px solid $firstColor;
+				padding: 7px 7px 0 7px;
+				transition: 0.4s;
+				position: relative;
+				top: 0;
+				margin: 30px;
+				flex: 0 0 20%;
+
+				.PblogCategory {
+					text-transform: uppercase;
+					font-family: "Poppins", sans-serif;
+					font-weight: 700;
+					color: #6b5bd4;
+					text-decoration: none;
+				}
+				.PblogHeader {
+					font-family: "Poppins", sans-serif;
+					text-transform: uppercase;
+					font-size: 25px;
+					color: $firstColor;
+					text-decoration: none;
+				}
+
+				.PblogImg {
+					max-height: 100%;
+					max-width: 500px;
+				}
+
+				.PblogText {
+					font-family: "Poppins", sans-serif;
+					color: #6b5bd4;
+					text-decoration: none;
+					flex-grow: 1;
+					max-width: 500px;
+					padding: 0 2px 0 2px;
+				}
+
+				.PblogDateCont {
+					padding: 6px 0 5px 0;
+					font-family: "Poppins", sans-serif;
+					font-weight: 700;
+					color: #6b5bd4;
+					align-self: flex-end;
+					text-decoration: none;
+					width: 100%;
+
+					svg:first-of-type {
+						padding-left: 3px;
+					}
+
+					svg:nth-of-type(2) {
+						float: right;
+						line-height: 14px;
+						vertical-align: middle;
+						transition: 0.4s;
+					}
+				}
+			}
+
+			.PblogArticle:hover {
+				-webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
+				box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
+				top: -4px;
+
+				svg:nth-of-type(2) {
+					color: $thirdColor;
+				}
+			}
+		}
+	}
+
+	#PmetaCont {
+		max-width: 2000px;
+		padding: 50px;
+		color: $secondColor;
+
+		.PmetaArticlesCont {
+			display: flex;
+			align-items: flex-start;
+			align-content: flex-start;
+			flex-wrap: wrap;
+			grid-column: 1 / 3;
+			justify-content: center;
+
+			.PmetaArticle {
+				background: $firstColor;
+				flex: 0 0 29%;
+				border: 3px solid $secondColor;
+				padding: 5px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: 5px;
+
+				img {
+					max-width: 100%;
+					max-height: 100%;
+				}
+
+				.PmetaContentCont {
+					display: flex;
+					align-items: flex-start;
+					align-content: flex-start;
+					flex-wrap: wrap;
+					width: 100%;
+					grid-column-start: 1;
+					grid-column-end: 3;
+
+					.PmetaNames,
+					.PmetaDesc,
+					.PmetaTarget,
+					.PmetaDate {
+						font-family: $font3;
+						padding: 0 5px 5px 5px;
+						width: 100%;
+					}
+
+					.PmetaTarget,
+					.PmetaDate {
+						color: $thirdColor;
+						font-size: 17px;
+						padding-bottom: 0;
+
+						span {
+							font-weight: 700;
+							text-transform: uppercase;
+							color: $secondColor;
+						}
+					}
+
+					.PmetaDate {
+						padding-bottom: 3px;
+					}
+
+					.PmetaNames {
+						font-size: 30px;
+						font-weight: 700;
+						padding: 5px 5px 2px 2px;
+					}
+
+					.PmetaDesc {
+						padding: 0 5px 5px 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1190px) {
 	header {
 		display: flex;
@@ -844,6 +1069,20 @@ footer {
 			#headerImg {
 				margin: 0;
 				max-height: 40vw;
+			}
+		}
+	}
+
+	.PCont {
+		#PmetaCont {
+			padding: 0;
+			.PmetaArticlesCont {
+				.PmetaArticle {
+					flex: 0 0 46%;
+				}
+				.PmetaArticle:last-of-type {
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}
@@ -1063,14 +1302,24 @@ footer {
 		}
 	}
 
-	#metamorfozy {
-		#metaCont {
-			#metaArticlesCont {
+	.metamorfozy {
+		.metaCont {
+			.metaArticlesCont {
 				flex-wrap: wrap;
 
 				.metaArticle {
 					flex: 1 0 70%;
 					margin: 10px 0 0 0 !important;
+				}
+			}
+		}
+	}
+
+	.PCont {
+		#PmetaCont {
+			.PmetaArticlesCont {
+				.PmetaArticle {
+					flex: 0 0 90%;
 				}
 			}
 		}
@@ -1140,15 +1389,15 @@ footer {
 		}
 	}
 
-	#metamorfozy {
+	.metamorfozy {
 		padding: 30px 20px 60px 20px;
 
-		#metaCont {
-			#metaHeader {
+		.metaCont {
+			.metaHeader {
 				font-size: 10vw;
 			}
 
-			#metaArticlesCont {
+			.metaArticlesCont {
 				flex-wrap: wrap;
 
 				.metaArticle {

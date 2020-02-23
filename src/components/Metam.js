@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 function Metam() {
 	return (
-		<div id="metamorfozy">
-			<div id="metaCont">
-				<div id="metaHeader">Zobacz, komu już pomogłem!</div>
-				<div id="metaArticlesCont">
+		<div className="metamorfozy">
+			<div className="metaCont">
+				<div className="metaHeader">Zobacz, komu już pomogłem!</div>
+				<div className="metaArticlesCont">
 					<div className="metaArticle">
 						<img
 							src={require('../images/aboutMe.jpg')}
