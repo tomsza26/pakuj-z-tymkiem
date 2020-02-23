@@ -1,11 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { Element } from 'react-scroll';
 
 function Footer() {
 	return (
 		<footer>
-			<div id="footerBackground">
+			<Element id="footerBackground" name="footer">
 				<div id="footerCallCon">
 					<div id="footerCallText" data-aos="fade-up" data-aos-duration="2500" data-aos-once="true">
 						ZADZWOŃ TERAZ
@@ -14,7 +15,7 @@ function Footer() {
 						665 628 680
 					</div>
 				</div>
-			</div>
+			</Element>
 			<div id="footerContent">
 				<div id="footerContactBorder">
 					<form method="POST">

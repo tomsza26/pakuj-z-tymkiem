@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../images/LogoV1.js';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 class Heading extends React.Component {
 	constructor(props) {
@@ -104,9 +105,9 @@ class Heading extends React.Component {
 						>
 							<div className="a">współpraca</div>
 						</NavLink>
-						<a className="a" href="#footerBackground" id="headContact">
+						<Link className="a" id="headContact" to="footer" smooth={true} duration={1000} isDynamic={true}>
 							kontakt
-						</a>
+						</Link>
 					</nav>
 				</div>
 			</header>
