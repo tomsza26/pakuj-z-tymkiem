@@ -1163,6 +1163,14 @@ footer {
 		}
 	}
 
+	.PCont {
+		.PInner {
+			.PHeader {
+				padding-top: 10px;
+			}
+		}
+	}
+
 	header {
 		display: flex;
 		flex-wrap: wrap;
@@ -1231,9 +1239,13 @@ footer {
 
 				a {
 					display: none;
-					margin: 5px 0 5px 0;
+					margin: 5px 0;
 					width: 100%;
 					text-align: right;
+				}
+
+				#headContact {
+					padding: 10px 5px;
 				}
 			}
 		}
