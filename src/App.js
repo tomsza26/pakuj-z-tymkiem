@@ -35,6 +35,24 @@ class App extends React.Component {
 			loading: undefined
 		};
 	}
+	static defaultProps = {
+		shouldShowDialog: false,
+		htmlRef: undefined,
+		minimized: undefined,
+		themeColor: undefined,
+		loggedInGreeting: undefined,
+		loggedOutGreeting: undefined,
+		greetingDialogDisplay: undefined,
+		greetingDialogDelay: undefined,
+		autoLogAppEvents: true,
+		xfbml: true,
+		version: '2.11',
+		language: 'pl_PL',
+		debug: false,
+		onCustomerChatDialogShow: undefined,
+		onCustomerChatDialogHide: undefined
+	};
+
 	componentDidMount() {
 		setTimeout(() => {
 			fetch('https://jsonplaceholder.typicode.com/posts').then((response) => response.json()).then((json) => {
@@ -49,11 +67,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<MessengerCustomerChat
-					pageId="109305670666810"
-					appId="812114352600049"
-					htmlRef="https://www.facebook.com/Pakuj-z-Tymkiem-109305670666810/"
-				/>
+				<MessengerCustomerChat pageId="109305670666810" appId="812114352600049" />
 				{!this.state.done ? (
 					<FadeIn>
 						<div id="loading">
