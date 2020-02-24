@@ -1,10 +1,8 @@
 import React from 'react';
 import Logo from '../images/LogoV1.js';
-import { Link } from 'react-scroll';
 import { HashLink as NavLink } from 'react-router-hash-link';
 import smoothscroll from 'smoothscroll-polyfill';
 
-window.__forceSmoothScrollPolyfill__ = true;
 smoothscroll.polyfill();
 
 class Heading extends React.Component {
@@ -42,6 +40,10 @@ class Heading extends React.Component {
 		}
 	};
 
+	navToFooter = () => {
+		document.querySelector('#footerBackground').scrollIntoView({ behavior: 'smooth' });
+	};
+
 	render() {
 		return (
 			<header>
@@ -66,13 +68,17 @@ class Heading extends React.Component {
 							<div className="bar2" />
 							<div className="bar3" />
 						</div>
-						<NavLink to="/" className="b">
+						<NavLink
+							className="b"
+							to={window.innerWidth > 680 ? '/' : '/#headerImgContainer'}
+							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+						>
 							<div className="a">strona główna</div>
 						</NavLink>
 						<NavLink
 							smooth
-							to="/oMnie#PMHeader"
-							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
+							to={window.innerWidth > 680 ? '/oMnie' : '/oMnie#PMHeader'}
+							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
 							className="b"
 							activeStyle={{
 								background: '#4831d4',
@@ -82,7 +88,8 @@ class Heading extends React.Component {
 							<div className="a">o mnie</div>
 						</NavLink>
 						<NavLink
-							to="/blog"
+							to={window.innerWidth > 680 ? '/blog' : '/blog#PMBlog'}
+							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
 							className="b"
 							activeStyle={{
 								background: '#4831d4',
@@ -92,7 +99,8 @@ class Heading extends React.Component {
 							<div className="a">blog</div>
 						</NavLink>
 						<NavLink
-							to="/metamorfozy"
+							to={window.innerWidth > 680 ? '/metamorfozy' : '/metamorfozy#PMMeta'}
+							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
 							className="b"
 							activeStyle={{
 								background: '#4831d4',
@@ -102,7 +110,8 @@ class Heading extends React.Component {
 							<div className="a">metamorfozy</div>
 						</NavLink>
 						<NavLink
-							to="/wspolpraca"
+							to={window.innerWidth > 680 ? '/wspolpraca' : '/wspolpraca#PMWspol'}
+							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
 							className="b"
 							activeStyle={{
 								background: '#4831d4',
@@ -111,9 +120,9 @@ class Heading extends React.Component {
 						>
 							<div className="a">współpraca</div>
 						</NavLink>
-						<Link className="a" id="headContact" to="footer" smooth={true} duration={1000} isDynamic={true}>
+						<a onClick={this.navToFooter} className="a" id="headContact">
 							kontakt
-						</Link>
+						</a>
 					</nav>
 				</div>
 			</header>
