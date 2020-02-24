@@ -7,15 +7,9 @@ class Pmetamorfozy extends React.Component {
 
 	render() {
 		return (
-			<div className="PCont">
+			<div className="PCont" id="PMMeta">
 				<div className="PInner" id="PmetaCont">
-					<div
-						className="PHeader"
-						data-aos="fade-down"
-						data-aos-duration="2000"
-						data-aos-once="true"
-						id="PMMeta"
-					>
+					<div className="PHeader" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
 						METAMORFOZY
 					</div>
 					<div className="PmetaArticlesCont">

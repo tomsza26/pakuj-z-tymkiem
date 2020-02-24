@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../images/LogoV1.js';
-import { HashLink as NavLink } from 'react-router-hash-link';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import smoothscroll from 'smoothscroll-polyfill';
 
 smoothscroll.polyfill();
@@ -76,7 +76,6 @@ class Heading extends React.Component {
 							<div className="a">strona główna</div>
 						</NavLink>
 						<NavLink
-							smooth
 							to={window.innerWidth > 680 ? '/oMnie' : '/oMnie#PMHeader'}
 							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
 							className="b"

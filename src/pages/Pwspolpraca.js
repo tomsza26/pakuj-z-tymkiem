@@ -7,15 +7,9 @@ class Pwspolpraca extends React.Component {
 
 	render() {
 		return (
-			<div className="PCont">
+			<div className="PCont" id="PMWspol">
 				<div className="PInner">
-					<div
-						className="PHeader"
-						data-aos="fade-down"
-						data-aos-duration="2000"
-						data-aos-once="true"
-						id="PMWspol"
-					>
+					<div className="PHeader" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
 						WSPÓŁPRACA
 					</div>
 					<div className="Pcoop">

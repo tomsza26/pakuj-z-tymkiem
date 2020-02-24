@@ -15,15 +15,9 @@ class Pblog extends React.Component {
 
 	render() {
 		return (
-			<div className="PCont">
+			<div className="PCont" id="PMBlog">
 				<div className="PInner" id="Pblog">
-					<div
-						className="PHeader"
-						data-aos="fade-down"
-						data-aos-duration="2000"
-						data-aos-once="true"
-						id="PMBlog"
-					>
+					<div className="PHeader" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
 						BLOG
 					</div>
 					<div id="PblogButtonsCont">
