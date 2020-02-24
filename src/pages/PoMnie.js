@@ -9,7 +9,13 @@ class PoMnie extends React.Component {
 		return (
 			<div className="PCont">
 				<div className="PInner">
-					<div className="PHeader" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
+					<div
+						className="PHeader"
+						data-aos="fade-down"
+						data-aos-duration="2000"
+						data-aos-once="true"
+						id="PMHeader"
+					>
 						O MNIE
 					</div>
 					<div id="PblogText" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">

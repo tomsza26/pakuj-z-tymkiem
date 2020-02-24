@@ -1,7 +1,8 @@
 import React from 'react';
 import Logo from '../images/LogoV1.js';
-import { NavLink } from 'react-router-dom';
+
 import { Link } from 'react-scroll';
+import { HashLink as NavLink } from 'react-router-hash-link';
 
 class Heading extends React.Component {
 	constructor(props) {
@@ -66,7 +67,8 @@ class Heading extends React.Component {
 							<div className="a">strona główna</div>
 						</NavLink>
 						<NavLink
-							to="/oMnie"
+							to="/oMnie#PMHeader"
+							scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'end' })}
 							className="b"
 							activeStyle={{
 								background: '#4831d4',
