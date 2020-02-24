@@ -8,7 +8,6 @@ import * as palmDude from './images/palmDude.json';
 import * as success from './images/success.json';
 import FadeIn from 'react-fade-in';
 import Lottie from 'react-lottie';
-import ReactLoading from 'react-loading';
 
 AOS.init();
 
@@ -50,6 +49,11 @@ class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<MessengerCustomerChat
+					pageId="109305670666810"
+					appId="812114352600049"
+					htmlRef="https://www.facebook.com/Pakuj-z-Tymkiem-109305670666810/"
+				/>
 				{!this.state.done ? (
 					<FadeIn>
 						<div id="loading">

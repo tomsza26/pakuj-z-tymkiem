@@ -63,7 +63,7 @@ function Footer() {
 									<FontAwesomeIcon icon={faFacebookF} color="#3b5999" />
 								</a>
 								<a
-									href="/"
+									href="https://www.instagram.com/pakuj_z_tymkiem/"
 									target="_blank"
 									rel="noopener noreferrer"
 									data-aos="zoom-in"
@@ -73,7 +73,7 @@ function Footer() {
 									<FontAwesomeIcon icon={faInstagram} color="#e4405f" />
 								</a>
 								<a
-									href="/"
+									href="https://www.youtube.com/channel/UCZFRwCFxdPGHL7lYPEtV6Qw?guided_help_flow=3"
 									target="_blank"
 									rel="noopener noreferrer"
 									data-aos="zoom-in"
