@@ -11,7 +11,7 @@ function Footer() {
 						ZADZWOŃ TERAZ
 					</div>
 					<div id="footerCallNumber" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
-						665 628 680
+						503 577 932
 					</div>
 				</div>
 			</div>
@@ -53,7 +53,7 @@ function Footer() {
 							<div id="footerSocialHeader">Znajdziesz mnie na:</div>
 							<div id="footerIcons">
 								<a
-									href="/"
+									href="https://www.facebook.com/Pakuj-z-Tymkiem-109305670666810/?tn-str=k*F"
 									target="_blank"
 									rel="noopener noreferrer"
 									data-aos="zoom-in"

@@ -7,13 +7,13 @@ $thirdColor: #f75019;
 $maxWidth: 2000px;
 
 ::-moz-selection {
-	color: #f75019;
-	background: #ccf381;
+	color: $thirdColor;
+	background: $secondColor;
 }
 
 ::selection {
-	color: #f75019;
-	background: #ccf381;
+	color: $thirdColor;
+	background: $secondColor;
 }
 
 * {
@@ -30,6 +30,21 @@ a {
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+}
+
+#loading {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	height: 100vh;
+
+	h1 {
+		text-align: center;
+		color: $secondColor;
+		font-family: $font2;
+	}
 }
 
 #headerImgBack {

@@ -51,8 +51,8 @@ class Heading extends React.Component {
 				<div id="navContainer">
 					<div id="telephone" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
 						zadzwoń:{' '}
-						<a id="number" href="tel:+48-665-628-680">
-							+48 665 628 680
+						<a id="number" href="tel:+48-503-577-932">
+							+48 503 577 932
 						</a>
 					</div>
 					<nav
