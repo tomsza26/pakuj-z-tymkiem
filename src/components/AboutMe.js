@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavHashLink as Link } from 'react-router-hash-link';
 
 function AboutMe() {
 	return (
@@ -18,7 +18,7 @@ function AboutMe() {
 						ważną rolę. Jeśli jesteś ciekawy jakie dyscypliny uprawiałem i jak zaczynałem pracę jako trener,
 						wystarczy, że klikniesz poniższy przycisk.
 					</div>
-					<Link to="/oMnie">
+					<Link to="/oMnie#aboutContainer">
 						<div href="" id="aboutMeButton">
 							CZYTAJ WIĘCEJ
 						</div>

@@ -51,7 +51,7 @@ class PoMnie extends React.Component {
 						i mentalnymi związanymi z treningiem. Także mam zamiar czegoś się nauczyć od osób ją
 						odwiedzających co sprawi, że moje metody będą coraz bardziej skuteczne.
 					</div>
-					<div id="PblogImage" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+					<div id="PblogImage" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
 						<img src={require('../images/slider1.jpg')} alt="tymek" />
 					</div>
 				</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { NavHashLink as Link } from 'react-router-hash-link';
 
 function Metam() {
 	return (
@@ -81,7 +81,7 @@ function Metam() {
 					</div>
 				</div>
 			</div>
-			<Link to="/metamorfozy">
+			<Link to="/metamorfozy#PMMeta">
 				<div id="metaButton">
 					WIĘCEJ METAMORFOZ <FontAwesomeIcon icon={faExternalLinkAlt} />
 				</div>

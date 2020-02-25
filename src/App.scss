@@ -836,7 +836,7 @@ footer {
 		max-width: 1400px;
 		margin: 0 auto;
 		display: grid;
-		padding: 20px 0 20px 0;
+		padding: 30px 0 20px 0;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 15px;
 
@@ -844,10 +844,10 @@ footer {
 			font-family: "Krona One", sans-serif;
 			font-size: 35px;
 			font-weight: 700;
-			padding-bottom: 20px;
 			text-align: center;
 			grid-column: 1 / 3;
 			color: $firstColor;
+			padding-bottom: 20px;
 		}
 
 		#PblogText {
@@ -879,6 +879,7 @@ footer {
 	#Pblog {
 		max-width: 2000px;
 		color: $secondColor;
+		padding: 30px 15px 20px 15px;
 
 		#PblogButtonsCont {
 			display: flex;
@@ -888,7 +889,7 @@ footer {
 			margin-bottom: 10px;
 
 			.PBlogButton {
-				margin: 0 5px 0 5px;
+				margin: 5px 5px 5px 5px;
 				text-transform: uppercase;
 				color: $secondColor;
 				font-weight: 700;
@@ -921,8 +922,10 @@ footer {
 				transition: 0.4s;
 				position: relative;
 				top: 0;
-				margin: 30px;
-				flex: 0 0 20%;
+				margin: 10px;
+				flex: 1;
+				min-width: 300px;
+				max-width: 500px;
 
 				.PblogCategory {
 					text-transform: uppercase;
@@ -941,7 +944,7 @@ footer {
 
 				.PblogImg {
 					max-height: 100%;
-					max-width: 500px;
+					max-width: 100%;
 				}
 
 				.PblogText {
@@ -949,7 +952,6 @@ footer {
 					color: #6b5bd4;
 					text-decoration: none;
 					flex-grow: 1;
-					max-width: 500px;
 					padding: 0 2px 0 2px;
 				}
 
@@ -990,7 +992,7 @@ footer {
 
 	#PmetaCont {
 		max-width: 2000px;
-		padding: 20px 50px 50px 50px;
+		padding: 30px 50px 50px 50px;
 		color: $secondColor;
 
 		.PmetaArticlesCont {
@@ -1069,7 +1071,7 @@ footer {
 	padding: 0 10px;
 
 	#aboutContainer {
-		max-width: 800px;
+		max-width: 1000px;
 	}
 }
 
@@ -1139,7 +1141,7 @@ footer {
 
 	.PCont {
 		#PmetaCont {
-			padding: 0;
+			padding: 30px 0 20px 0;
 			.PmetaArticlesCont {
 				.PmetaArticle {
 					flex: 0 0 46%;
@@ -1227,14 +1229,6 @@ footer {
 		}
 	}
 
-	.PCont {
-		.PInner {
-			.PHeader {
-				padding-top: 10px;
-			}
-		}
-	}
-
 	header {
 		display: flex;
 		flex-wrap: wrap;
@@ -1311,6 +1305,23 @@ footer {
 				#headContact {
 					padding: 10px 5px;
 				}
+			}
+		}
+	}
+
+	#Pblog {
+		padding: 30px 20px 20px 20px;
+
+		#PblogButtonsCont {
+			display: flex;
+			grid-column: 1 / 3;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 10px;
+			flex-direction: column;
+
+			.PBlogButton {
+				text-align: right !important;
 			}
 		}
 	}
@@ -1426,7 +1437,6 @@ footer {
 		.PInner {
 			.PHeader {
 				font-size: 8.5vw;
-				padding-top: 20px;
 			}
 		}
 	}
