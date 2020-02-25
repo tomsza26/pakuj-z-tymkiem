@@ -7,12 +7,19 @@ function HeaderPhoto() {
 				<div id="headerTextContainer" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
 					<div className="headerImgTitle">Szukasz zmiany?</div>
 					<div className="headerImgTitle">Dobrze trafiłeś!</div>
-					<div className="headerImgText">Mam na imię Tymek i pomogę Ci osiągnąć wymarzoną sylwetkę!</div>
+					<div className="headerImgText">Mam na imię Tymek i pomogę Ci osiągnąć wybrany cel!</div>
 					<div className="headerImgText">
 						Znajdziesz tutaj ogromną dawkę wiedzy, łatwo przystępną dla każdego. Koniecznie zajrzyj do
-						sekcji BLOG.
+						sekcji <span id="blogColor">BLOG</span>.
 					</div>
-					<div className="headerImgText">Możesz umówić się ze mną na trening.</div>
+					<div className="headerImgText">
+						Chcesz zrzucić zbędne kilogramy? A może przybrać na masie mięśniowej i sile?
+					</div>
+					<div className="headerImgText">
+						Odezwij się do mnie, umówimy się na trening lub przedyskutujemy Twoje cele poprzez konsultację
+						on-line.
+					</div>
+					<div className="headerImgText">Pierwszy krok należy do Ciebie!</div>
 				</div>
 				<img
 					id="headerImg"

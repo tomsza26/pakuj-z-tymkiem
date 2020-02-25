@@ -10,17 +10,13 @@ function AboutMe() {
 					<div id="aboutMeTrener">TRENER PERSONALNY</div>
 					<img id="aboutPic1" src={require('../images/aboutMeCircle.png')} alt="about" />
 					<div id="aboutMeContent">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique ligula vel mollis
-						finibus. Ut et viverra lacus, convallis pulvinar lorem. Nulla facilisi. Sed sed urna nec felis
-						luctus pharetra. Nunc fringilla, quam sit amet rutrum commodo, lectus lectus rutrum lacus, et
-						pulvinar elit neque id lorem. Proin eu nisl suscipit, varius nunc sed, cursus est. Praesent nec
-						facilisis nunc. Integer volutpat est ut porttitor ullamcorper. Etiam congue cursus justo, vel
-						volutpat erat pulvinar feugiat. Donec rhoncus eros porta leo tincidunt, a tincidunt lorem
-						placerat. Ut ac tincidunt lacus, ut tincidunt tellus. Mauris rhoncus rutrum orci, id malesuada
-						est varius sit amet. Sed commodo, tortor quis blandit lobortis, neque ante rhoncus nisl, ut
-						fringilla neque nisl laoreet nunc. Quisque aliquam augue vulputate dolor fermentum rutrum. Nunc
-						quis rhoncus sem. Etiam molestie rutrum nisl, eget cursus purus ullamcorper et. Integer feugiat
-						enim quis ullamcorper congue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
+						Cześć! Jak zauważyliście jestem pasjonatem sportu. Od 9 lat poznaje tajniki różnych treningów,
+						sposobów odżywiania się i podejścia do tych tematów. A od 3 lat jestem zawodowo w branży jako
+						trener. Przez ten czas współpracowałem z dużą ilością osób i większość z nich osiągnęła swoje
+						cele! Powstanie tej strony pozwala mi znacznie zwiększyć doświadczenie. Wiąże się z tym
+						dopracowanie moich metod aby były jeszcze bardziej skuteczne. Od zawsze sport w moim życiu grał
+						ważną rolę. Jeśli jesteś ciekawy jakie dyscypliny uprawiałem i jak zaczynałem pracę jako trener,
+						wystarczy, że klikniesz poniższy przycisk.
 					</div>
 					<Link to="/oMnie">
 						<div href="" id="aboutMeButton">
