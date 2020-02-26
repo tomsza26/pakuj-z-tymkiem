@@ -12,7 +12,7 @@ class Pwspolpraca extends React.Component {
 					<div className="PHeader" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
 						WSPÓŁPRACA
 					</div>
-					<div className="Pcoop">
+					<div className="Pcoop" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
 						Potrzebujesz planu treningowego stworzonego według twoich potrzeb? A może spersonalizowanej
 						diety? Czy po prostu jesteś na początku przygody ze zdrowym stylem życia i nie wiesz jak się do
 						tego zabrać?

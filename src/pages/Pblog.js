@@ -1,17 +1,12 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendarAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import PblogNavigation from './PblogNavigation';
 
 class Pblog extends React.Component {
 	componentDidMount() {
 		document.title = 'Blog - Pakuj z Tymkiem';
 	}
-
-	shorten = (str, maxLen, separator = ' ') => {
-		if (str.length <= maxLen) return str;
-		return str.substr(0, str.lastIndexOf(separator, maxLen)) + '...';
-	};
 
 	render() {
 		return (
@@ -27,106 +22,81 @@ class Pblog extends React.Component {
 						BLOG
 					</div>
 					<div id="PblogButtonsCont">
-						<div className="PBlogButton">DIETA</div>
-						<div className="PBlogButton">TRENING</div>
-						<div className="PBlogButton">CIEKAWOSTKI</div>
-						<div className="PBlogButton">JAK ZACZĄĆ?</div>
-						<div className="PBlogButton">ROZWÓJ OSOBISTY</div>
-						<div className="PBlogButton">PLANY TRENINGOWE</div>
+						<NavLink
+							to="/blog/dieta"
+							className="PBlogButton"
+							activeStyle={{
+								background: '#ccf381',
+								color: '#4831d4'
+							}}
+						>
+							DIETA
+						</NavLink>
+						<NavLink
+							to="/blog/trening"
+							className="PBlogButton"
+							activeStyle={{
+								background: '#ccf381',
+								color: '#4831d4'
+							}}
+						>
+							TRENING
+						</NavLink>
+						<NavLink
+							to="/blog/ciekawostki"
+							className="PBlogButton"
+							activeStyle={{
+								background: '#ccf381',
+								color: '#4831d4'
+							}}
+						>
+							CIEKAWOSTKI
+						</NavLink>
+						<NavLink
+							to="/blog/jak_zaczac"
+							className="PBlogButton"
+							activeStyle={{
+								background: '#ccf381',
+								color: '#4831d4'
+							}}
+						>
+							JAK ZACZĄĆ?
+						</NavLink>
+						<NavLink
+							to="/blog/rozwoj_osobisty"
+							className="PBlogButton"
+							activeStyle={{
+								background: '#ccf381',
+								color: '#4831d4'
+							}}
+						>
+							ROZWÓJ OSOBISTY
+						</NavLink>
+						<NavLink
+							to="/blog/plany_treningowe"
+							className="PBlogButton"
+							activeStyle={{
+								background: '#ccf381',
+								color: '#4831d4'
+							}}
+						>
+							PLANY TRENINGOWE
+						</NavLink>
 					</div>
 
-					<div className="PblogArticlesCont">
-						<a href="/" className="PblogArticle">
-							<div className="PblogCategory">rozwój osobisty</div>
-							<div className="PblogHeader">masno fest</div>
-							<img src={require('../images/slider1.jpg')} alt="article Photo" className="PblogImg" />
-							<div className="PblogText">
-								{this.shorten(
-									'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo voluptas facere, quidem atque quas temporibus fuga consectetur animi quis dignissimos officia maiores sequi laborum impedit voluptates in libero aperiam. Suscipit!',
-									400
-								)}
-							</div>
-							<div className="PblogDateCont">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</a>
-						<a href="/" className="PblogArticle">
-							<div className="PblogCategory">rozwój osobisty</div>
-							<div className="PblogHeader">masno fest</div>
-							<img src={require('../images/slider1.jpg')} alt="article Photo" className="PblogImg" />
-							<div className="PblogText">
-								{this.shorten(
-									'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo voluptas facere, quidem atque quas temporibus fuga consectetur animi quis dignissimos officia maiores sequi laborum impedit voluptates in libero aperiam. Suscipit!',
-									400
-								)}
-							</div>
-							<div className="PblogDateCont">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</a>
-						<a href="/" className="PblogArticle">
-							<div className="PblogCategory">rozwój osobisty</div>
-							<div className="PblogHeader">masno fest</div>
-							<img src={require('../images/slider1.jpg')} alt="article Photo" className="PblogImg" />
-							<div className="PblogText">
-								{this.shorten(
-									'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo voluptas facere, quidem atque quas temporibus fuga consectetur animi quis dignissimos officia maiores sequi laborum impedit voluptates in libero aperiam. Suscipit!',
-									400
-								)}
-							</div>
-							<div className="PblogDateCont">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</a>
-						<a href="/" className="PblogArticle">
-							<div className="PblogCategory">rozwój osobisty</div>
-							<div className="PblogHeader">masno fest</div>
-							<img src={require('../images/slider1.jpg')} alt="article Photo" className="PblogImg" />
-							<div className="PblogText">
-								{this.shorten(
-									'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo voluptas facere, quidem atque quas temporibus fuga consectetur animi quis dignissimos officia maiores sequi laborum impedit voluptates in libero aperiam. Suscipit!',
-									400
-								)}
-							</div>
-							<div className="PblogDateCont">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</a>
-						<a href="/" className="PblogArticle">
-							<div className="PblogCategory">rozwój osobisty</div>
-							<div className="PblogHeader">masno fest</div>
-							<img src={require('../images/slider1.jpg')} alt="article Photo" className="PblogImg" />
-							<div className="PblogText">
-								{this.shorten(
-									'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo voluptas facere, quidem atque quas temporibus fuga consectetur animi quis dignissimos officia maiores sequi laborum impedit voluptates in libero aperiam. Suscipit!',
-									400
-								)}
-							</div>
-							<div className="PblogDateCont">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</a>
-						<a href="/" className="PblogArticle">
-							<div className="PblogCategory">rozwój osobisty</div>
-							<div className="PblogHeader">masno fest</div>
-							<img src={require('../images/slider1.jpg')} alt="article Photo" className="PblogImg" />
-							<div className="PblogText">
-								{this.shorten(
-									'Lorem, ipsum dolor sit amet consectetur adipisicing elit.Illo voluptas facere, quidem atque quas temporibus fuga consectetur animi quis dignissimos officia maiores sequi laborum impedit voluptates in libero aperiam. Suscipit!',
-									400
-								)}
-							</div>
-							<div className="PblogDateCont">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</a>
-					</div>
+					<Router>
+						<div className="PblogArticlesCont">
+							<Switch>
+								<Route path="/blog" component={PblogNavigation} />
+								<Route path="/blog/dieta" component={PblogNavigation} />
+								<Route path="/blog/trening" component={PblogNavigation} />
+								<Route path="/wspolpraca/ciekawostki" component={PblogNavigation} />
+								<Route path="/metamorfozy/jak_zaczac" component={PblogNavigation} />
+								<Route path="/metamorfozy/rozwoj_osobisty" component={PblogNavigation} />
+								<Route path="/metamorfozy/plany_treningowe" component={PblogNavigation} />
+							</Switch>
+						</div>
+					</Router>
 				</div>
 			</div>
 		);

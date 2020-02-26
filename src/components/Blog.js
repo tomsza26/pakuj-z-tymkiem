@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import articles from '../content/articles.json';
 
 class Blog extends React.Component {
 	shorten = (str, maxLen, separator = ' ') => {
@@ -10,6 +11,27 @@ class Blog extends React.Component {
 	};
 
 	render() {
+		let blog = articles
+			.sort(function(a, b) {
+				return b.id - a.id;
+			})
+			.slice(0, 3)
+			.map((data, index) => {
+				return (
+					<Link to={'/blog/' + data.id} key={index}>
+						<div className="blogArticle">
+							<div className="blogArticleCategory">{data.kategoria}</div>
+							<div className="blogArticleHeader">{data.nazwa}</div>
+							<div className="blogArticleContent">{this.shorten(data.tekst, 300)}</div>
+							<div className="blogArticleDate">
+								<FontAwesomeIcon icon={faCalendarAlt} /> {data.data}
+								<FontAwesomeIcon icon={faExternalLinkAlt} />
+							</div>
+						</div>
+					</Link>
+				);
+			});
+
 		return (
 			<section id="blog">
 				<header id="blogHeader">BLOG</header>
@@ -27,7 +49,7 @@ class Blog extends React.Component {
 						<Link to="/blog/trening">
 							<div className="blogButton">trening</div>
 						</Link>
-						<Link to="/blog/jakZaczac">
+						<Link to="/blog/jak_zaczac">
 							<div className="blogButton" id="blogStart">
 								jak zacząć?
 							</div>
@@ -35,63 +57,15 @@ class Blog extends React.Component {
 						<Link to="/blog/ciekawostki">
 							<div className="blogButton">ciekawostki</div>
 						</Link>
-						<Link to="/blog/rozwojOsobisty">
+						<Link to="/blog/rozwoj_osobisty">
 							<div className="blogButton">rozwój osobisty</div>
 						</Link>
-						<Link to="/blog/planyTreningowe">
+						<Link to="/blog/plany_treningowe">
 							<div className="blogButton">plany treningowe</div>
 						</Link>
 					</div>
 					<div id="blogContentHeader2">najnowsze artykuły</div>
-
-					<Link to="/blog/">
-						<div className="blogArticle">
-							<div className="blogArticleCategory">rozwój osobisty</div>
-							<div className="blogArticleHeader">nagłówek jest masno</div>
-							<div className="blogArticleContent">
-								{this.shorten(
-									'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
-									300
-								)}
-							</div>
-							<div className="blogArticleDate">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</div>
-					</Link>
-					<Link to="/blog/">
-						<div className="blogArticle">
-							<div className="blogArticleCategory">rozwój osobisty</div>
-							<div className="blogArticleHeader">nagłówek jest masno</div>
-							<div className="blogArticleContent">
-								{this.shorten(
-									'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
-									300
-								)}
-							</div>
-							<div className="blogArticleDate">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</div>
-					</Link>
-					<Link to="/blog/">
-						<div className="blogArticle">
-							<div className="blogArticleCategory">rozwój osobisty</div>
-							<div className="blogArticleHeader">nagłówek jest masno</div>
-							<div className="blogArticleContent">
-								{this.shorten(
-									'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis molestias expedita ipsum libero ex nisi ipsam quia, sequi earum repellat ipsa quibusdam accusamus deleniti error nihil porro soluta tempora sapiente! Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolore mollitia aspernatur laboriosammolestias illum eum assumenda ab laudantium, nemo corporis perspiciatis! Qui tempore ab eligendi dolores molestias. Suscipit!',
-									300
-								)}
-							</div>
-							<div className="blogArticleDate">
-								<FontAwesomeIcon icon={faCalendarAlt} /> 15.05.1999{' '}
-								<FontAwesomeIcon icon={faExternalLinkAlt} />
-							</div>
-						</div>
-					</Link>
+					{blog}
 				</div>
 			</section>
 		);

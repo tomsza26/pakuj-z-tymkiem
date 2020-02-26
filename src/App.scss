@@ -899,6 +899,7 @@ footer {
 				text-align: center;
 				background: $firstColor;
 				transition: 0.6s;
+				text-decoration: none;
 			}
 
 			.PBlogButton:hover {
@@ -1498,6 +1499,19 @@ footer {
 				.metaArticle {
 					flex: 1 0 70%;
 					margin: 10px 0 0 0 !important;
+				}
+			}
+		}
+	}
+
+	#PMBlog {
+		#Pblog {
+			padding: 30px 5px 20px 5px;
+
+			.PblogArticlesCont {
+				.PblogArticle {
+					margin: 10px 3px;
+					min-width: 80vw;
 				}
 			}
 		}
