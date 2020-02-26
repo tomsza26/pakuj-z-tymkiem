@@ -19,9 +19,17 @@ class PblogNavigation extends React.Component {
 					})
 					.map((data, index) => {
 						let docLoc = document.location.pathname;
+						let cate = data.kategoria
+							.replace(/\s+/g, '_')
+							.replace('ą', 'a')
+							.replace('ć', 'c')
+							.replace('ó', 'o')
+							.replace(/[^\w\s]/gi, '')
+							.toLowerCase();
+
 						if (docLoc === '/blog') {
 							return (
-								<Link to={'/blog/' + data.id} className="PblogArticle" key={index}>
+								<Link to={`/blog/${cate}/${data.id}`} className="PblogArticle" key={index}>
 									<div className="PblogCategory">{data.kategoria}</div>
 									<div className="PblogHeader">{data.nazwa}</div>
 									<img src={require('../images/slider1.jpg')} alt="articleP" className="PblogImg" />
@@ -32,17 +40,9 @@ class PblogNavigation extends React.Component {
 									</div>
 								</Link>
 							);
-						} else if (
-							data.kategoria
-								.replace(/\s+/g, '_')
-								.replace('ą', 'a')
-								.replace('ć', 'c')
-								.replace('ó', 'o')
-								.replace(/[^\w\s]/gi, '')
-								.toLowerCase() === docLoc.substring(docLoc.indexOf('/') + 6)
-						) {
+						} else if (cate === docLoc.substring(docLoc.indexOf('/') + 6)) {
 							return (
-								<Link to={'/blog/' + data.id} className="PblogArticle" key={index}>
+								<Link to={`/blog/${cate}/${data.id}`} className="PblogArticle" key={index}>
 									<div className="PblogCategory">{data.kategoria}</div>
 									<div className="PblogHeader">{data.nazwa}</div>
 									<img src={require('../images/slider1.jpg')} alt="articleP" className="PblogImg" />
