@@ -119,9 +119,9 @@ class Heading extends React.Component {
 						>
 							<div className="a">współpraca</div>
 						</NavLink>
-						<a onClick={this.navToFooter} className="a" id="headContact">
+						<div onClick={this.navToFooter} className="a" id="headContact">
 							kontakt
-						</a>
+						</div>
 					</nav>
 				</div>
 			</header>

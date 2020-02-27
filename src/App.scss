@@ -153,7 +153,8 @@ header {
 				display: none;
 			}
 
-			a {
+			.b,
+			#headContact {
 				margin: 10px 20px 5px 20px;
 				text-transform: uppercase;
 				color: $firstColor;
@@ -176,11 +177,12 @@ header {
 				}
 			}
 
-			a:last-of-type {
+			#headContact {
 				margin-right: 0;
 			}
 
-			a:hover {
+			.b:hover,
+			#headContact:hover {
 				-webkit-box-shadow: -3px -3px 0px 0px rgba(0, 0, 0, 0.75);
 				-moz-box-shadow: -3px -3px 0px 0px rgba(0, 0, 0, 0.75);
 				box-shadow: -3px -3px 0px 0px rgba(0, 0, 0, 0.75);
@@ -487,21 +489,24 @@ header {
 
 		.metaArticlesCont {
 			display: flex;
-			align-items: flex-start;
-			align-content: flex-start;
 
 			.metaArticle {
 				background: $firstColor;
 				flex: 1 0 40%;
 				border: 3px solid $secondColor;
 				padding: 5px;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-column-gap: 5px;
+				display: flex;
+				flex-direction: column;
 
-				img {
-					max-width: 100%;
-					max-height: 100%;
+				.metaArticleImages {
+					display: grid;
+					grid-template-columns: auto auto;
+					grid-gap: 5px;
+
+					img {
+						max-width: 100%;
+						max-height: 100%;
+					}
 				}
 
 				.metaContentCont {
@@ -510,8 +515,6 @@ header {
 					align-content: flex-start;
 					flex-wrap: wrap;
 					width: 100%;
-					grid-column-start: 1;
-					grid-column-end: 3;
 
 					.metaNames,
 					.metaDesc,
@@ -876,6 +879,51 @@ footer {
 		}
 	}
 
+	#Particle {
+		max-width: 1000px;
+		padding-bottom: 50px;
+
+		.ParticleTextCont {
+			.ParticleCate,
+			.ParticleDate {
+				text-transform: uppercase;
+				font-family: $font3;
+				font-weight: 700;
+				font-size: 20px;
+			}
+
+			.ParticleDate {
+				font-size: 15px;
+				margin-bottom: 8px;
+
+				svg {
+					font-size: 14px;
+				}
+			}
+
+			.ParticleText {
+				margin-right: 5px;
+				font-size: 17px;
+
+				pre {
+					white-space: pre-wrap;
+					white-space: -moz-pre-wrap;
+					white-space: -pre-wrap;
+					white-space: -o-pre-wrap;
+					word-wrap: break-word;
+					margin: 0;
+				}
+			}
+		}
+
+		.ParticleImg {
+			max-width: 100%;
+			max-height: 100%;
+			margin-left: 5px;
+			margin-top: 61px;
+		}
+	}
+
 	#Pblog {
 		max-width: 2000px;
 		color: $secondColor;
@@ -907,6 +955,16 @@ footer {
 				background: $secondColor;
 				cursor: pointer;
 			}
+
+			#PBlogRed {
+				background: $thirdColor;
+				border: 3px solid $thirdColor;
+			}
+
+			#PBlogRed:hover {
+				background: $secondColor;
+				color: $thirdColor;
+			}
 		}
 
 		.PblogArticlesCont {
@@ -928,6 +986,8 @@ footer {
 				flex: 1;
 				min-width: 300px;
 				max-width: 500px;
+				display: flex;
+				flex-direction: column;
 
 				.PblogCategory {
 					text-transform: uppercase;
@@ -999,24 +1059,27 @@ footer {
 
 		.PmetaArticlesCont {
 			display: flex;
-			align-items: flex-start;
-			align-content: flex-start;
 			flex-wrap: wrap;
 			grid-column: 1 / 3;
 			justify-content: center;
 
 			.PmetaArticle {
 				background: $firstColor;
-				flex: 0 0 29%;
+				flex: 1 0 29%;
 				border: 3px solid $secondColor;
-				padding: 5px;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-column-gap: 5px;
+				padding: 7px;
+				display: flex;
+				flex-direction: column;
 
-				img {
-					max-width: 100%;
-					max-height: 100%;
+				.PmetaImages {
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-gap: 5px;
+
+					img {
+						max-width: 100%;
+						max-height: 100%;
+					}
 				}
 
 				.PmetaContentCont {
@@ -1025,8 +1088,6 @@ footer {
 					align-content: flex-start;
 					flex-wrap: wrap;
 					width: 100%;
-					grid-column-start: 1;
-					grid-column-end: 3;
 
 					.PmetaNames,
 					.PmetaDesc,
@@ -1116,6 +1177,20 @@ footer {
 			padding: 20px 0 0 0;
 		}
 	}
+
+	.PCont {
+		#PmetaCont {
+			padding: 30px 10px 20px 10px;
+			.PmetaArticlesCont {
+				.PmetaArticle {
+					flex: 1 0 47.5%;
+				}
+				.PmetaArticle {
+					margin-bottom: 3px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 1000px) {
@@ -1137,20 +1212,6 @@ footer {
 			#headerImg {
 				margin: 0;
 				max-height: 40vw;
-			}
-		}
-	}
-
-	.PCont {
-		#PmetaCont {
-			padding: 30px 0 20px 0;
-			.PmetaArticlesCont {
-				.PmetaArticle {
-					flex: 0 0 46%;
-				}
-				.PmetaArticle:last-of-type {
-					margin-bottom: 20px;
-				}
 			}
 		}
 	}
@@ -1202,6 +1263,19 @@ footer {
 	#blog {
 		margin-top: 10px;
 	}
+
+	.metamorfozy {
+		.metaCont {
+			.metaArticlesCont {
+				flex-wrap: wrap;
+
+				.metaArticle {
+					flex: 1 0 70%;
+					margin: 15px 0 0 0 !important;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 680px) {
@@ -1252,9 +1326,10 @@ footer {
 			}
 
 			nav {
-				margin: 15px 10px 0 10px;
+				margin: 15px auto 0 auto;
 				align-items: flex-start;
 				align-content: flex-start;
+				max-width: 500px;
 
 				.a:first-of-type {
 					margin: 5px 0;
@@ -1297,9 +1372,10 @@ footer {
 					transform: rotate(45deg) translate(-8px, -8px);
 				}
 
-				a {
+				a,
+				#headContact {
 					display: none;
-					margin: 5px 0;
+					margin: 5px 5px !important;
 					width: 100%;
 					text-align: right;
 				}
@@ -1386,19 +1462,6 @@ footer {
 
 				.blogArticle {
 					margin: 10px 0 0 0;
-				}
-			}
-		}
-	}
-
-	.metamorfozy {
-		.metaCont {
-			.metaArticlesCont {
-				flex-wrap: wrap;
-
-				.metaArticle {
-					flex: 1 0 70%;
-					margin: 10px 0 0 0 !important;
 				}
 			}
 		}

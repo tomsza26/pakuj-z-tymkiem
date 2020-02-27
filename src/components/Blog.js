@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import articles from '../content/articles.json';
 
 class Blog extends React.Component {
@@ -17,8 +17,16 @@ class Blog extends React.Component {
 			})
 			.slice(0, 3)
 			.map((data, index) => {
+				let cate = data.kategoria
+					.replace(/\s+/g, '_')
+					.replace('ą', 'a')
+					.replace('ć', 'c')
+					.replace('ó', 'o')
+					.replace(/[^\w\s]/gi, '')
+					.toLowerCase();
+
 				return (
-					<Link to={'/blog/' + data.id} key={index}>
+					<Link to={`/blog/${cate}/${data.id}#navContainer`} key={index}>
 						<div className="blogArticle">
 							<div className="blogArticleCategory">{data.kategoria}</div>
 							<div className="blogArticleHeader">{data.nazwa}</div>
@@ -35,7 +43,6 @@ class Blog extends React.Component {
 		return (
 			<section id="blog">
 				<header id="blogHeader">BLOG</header>
-
 				<div id="headerContainer">
 					<div className="blogContentHeader1">najnowsze artykuły</div>
 					<div className="blogContentHeader">szybki start</div>
@@ -43,24 +50,24 @@ class Blog extends React.Component {
 
 				<div id="blogContainer">
 					<div id="blogButtonsContainer" data-aos="fade-right" data-aos-duration="2500" data-aos-once="true">
-						<Link to="/blog/dieta">
+						<Link to="/blog/dieta#navContainer">
 							<div className="blogButton">dieta</div>
 						</Link>
-						<Link to="/blog/trening">
+						<Link to="/blog/trening#navContainer">
 							<div className="blogButton">trening</div>
 						</Link>
-						<Link to="/blog/jak_zaczac">
+						<Link to="/blog/jak_zaczac#navContainer">
 							<div className="blogButton" id="blogStart">
 								jak zacząć?
 							</div>
 						</Link>
-						<Link to="/blog/ciekawostki">
+						<Link to="/blog/ciekawostki#navContainer">
 							<div className="blogButton">ciekawostki</div>
 						</Link>
-						<Link to="/blog/rozwoj_osobisty">
+						<Link to="/blog/rozwoj_osobisty#navContainer">
 							<div className="blogButton">rozwój osobisty</div>
 						</Link>
-						<Link to="/blog/plany_treningowe">
+						<Link to="/blog/plany_treningowe#navContainer">
 							<div className="blogButton">plany treningowe</div>
 						</Link>
 					</div>

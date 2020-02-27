@@ -3,6 +3,7 @@ import React from 'react';
 class PoMnie extends React.Component {
 	componentDidMount() {
 		document.title = 'O Mnie - Pakuj z Tymkiem';
+		window.history.pushState(null, null, ' ');
 	}
 
 	render() {

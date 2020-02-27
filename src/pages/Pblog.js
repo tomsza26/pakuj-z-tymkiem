@@ -1,11 +1,14 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import PblogNavigation from './PblogNavigation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRedoAlt } from '@fortawesome/free-solid-svg-icons';
 
 class Pblog extends React.Component {
 	componentDidMount() {
 		document.title = 'Blog - Pakuj z Tymkiem';
+		window.history.pushState(null, null, ' ');
 	}
 
 	render() {
@@ -82,6 +85,9 @@ class Pblog extends React.Component {
 						>
 							PLANY TRENINGOWE
 						</NavLink>
+						<Link to="/blog" className="PBlogButton" id="PBlogRed">
+							<FontAwesomeIcon icon={faRedoAlt} />
+						</Link>
 					</div>
 
 					<Router>
@@ -90,10 +96,10 @@ class Pblog extends React.Component {
 								<Route path="/blog" component={PblogNavigation} />
 								<Route path="/blog/dieta" component={PblogNavigation} />
 								<Route path="/blog/trening" component={PblogNavigation} />
-								<Route path="/wspolpraca/ciekawostki" component={PblogNavigation} />
-								<Route path="/metamorfozy/jak_zaczac" component={PblogNavigation} />
-								<Route path="/metamorfozy/rozwoj_osobisty" component={PblogNavigation} />
-								<Route path="/metamorfozy/plany_treningowe" component={PblogNavigation} />
+								<Route path="/blog/ciekawostki" component={PblogNavigation} />
+								<Route path="/blog/jak_zaczac" component={PblogNavigation} />
+								<Route path="/blog/rozwoj_osobisty" component={PblogNavigation} />
+								<Route path="/blog/plany_treningowe" component={PblogNavigation} />
 							</Switch>
 						</div>
 					</Router>
