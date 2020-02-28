@@ -3,6 +3,7 @@ import React from 'react';
 class Pwspolpraca extends React.Component {
 	componentDidMount() {
 		document.title = 'Współpraca - Pakuj z Tymkiem';
+		window.history.pushState(null, null, ' ');
 	}
 
 	render() {

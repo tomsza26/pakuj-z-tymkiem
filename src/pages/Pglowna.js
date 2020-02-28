@@ -7,6 +7,7 @@ import HeaderPhoto from '../components/HeaderPhoto';
 class Pglowna extends React.Component {
 	componentDidMount() {
 		document.title = 'Strona Główna - Pakuj z Tymkiem';
+		window.history.pushState(null, null, ' ');
 	}
 
 	render() {
