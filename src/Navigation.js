@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function Navigation() {
 	return (
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<div className="App">
 				<Heading />
 				<Switch>
