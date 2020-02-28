@@ -48,7 +48,25 @@ class App extends React.Component {
 	}
 
 	render() {
-		return <Navigation />;
+		return (
+			<React.Fragment>
+				<MessengerCustomerChat pageId="109305670666810" appId="812114352600049" />
+				{!this.state.done ? (
+					<FadeIn>
+						<div id="loading">
+							{!this.state.loading ? (
+								<Lottie options={defaultOptions} height={200} width={200} />
+							) : (
+								<Lottie options={defaultOptions2} height={200} width={200} />
+							)}
+							<h1>jeszcze moment</h1>
+						</div>
+					</FadeIn>
+				) : (
+					<Navigation />
+				)}
+			</React.Fragment>
+		);
 	}
 }
 

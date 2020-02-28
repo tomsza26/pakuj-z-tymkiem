@@ -12,8 +12,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function Navigation() {
 	return (
-		<Router basename={process.env.PUBLIC_URL}>
-			<div className="App">
+		<div className="App">
+			<Router basename="/">
 				<Heading />
 				<Switch>
 					<Route path="/" exact component={Pglowna} />
@@ -25,7 +25,7 @@ export default function Navigation() {
 					<Route path="/metamorfozy" component={Pmetamorfozy} />
 				</Switch>
 				<Footer />
-			</div>
-		</Router>
+			</Router>
+		</div>
 	);
 }
