@@ -8,7 +8,7 @@ import Pglowna from './pages/Pglowna';
 import Pmetamorfozy from './pages/Pmetamorfozy';
 import Particle from './pages/Particle';
 import Pwspolpraca from './pages/Pwspolpraca';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 export default function Navigation() {
 	return (

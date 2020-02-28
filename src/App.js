@@ -36,23 +36,6 @@ class App extends React.Component {
 			loading: undefined
 		};
 	}
-	static defaultProps = {
-		shouldShowDialog: false,
-		htmlRef: undefined,
-		minimized: undefined,
-		themeColor: undefined,
-		loggedInGreeting: undefined,
-		loggedOutGreeting: undefined,
-		greetingDialogDisplay: undefined,
-		greetingDialogDelay: undefined,
-		autoLogAppEvents: true,
-		xfbml: true,
-		version: '2.11',
-		language: 'pl_PL',
-		debug: false,
-		onCustomerChatDialogShow: undefined,
-		onCustomerChatDialogHide: undefined
-	};
 
 	componentDidMount() {
 		setTimeout(() => {
