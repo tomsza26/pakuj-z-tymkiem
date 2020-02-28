@@ -1,7 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Lottie from 'react-lottie';
 import * as footerLoading from '../images/footerLoading.json';
 

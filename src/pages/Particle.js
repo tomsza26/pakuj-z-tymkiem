@@ -38,6 +38,14 @@ class Particle extends React.Component {
 									<div className="ParticleDate">
 										<FontAwesomeIcon icon={faCalendarAlt} /> {data.data}
 									</div>
+									<img
+										src={require(`../content/articleImages/${data.obraz}`)}
+										alt="articleP"
+										className="ParticleImg1"
+										data-aos="fade-left"
+										data-aos-duration="2000"
+										data-aos-once="true"
+									/>
 									<div className="ParticleText">
 										<pre>{data.tekst}</pre>
 									</div>
@@ -45,7 +53,7 @@ class Particle extends React.Component {
 								<img
 									src={require(`../content/articleImages/${data.obraz}`)}
 									alt="articleP"
-									className="ParticleImg"
+									className="ParticleImg2"
 									data-aos="fade-left"
 									data-aos-duration="2000"
 									data-aos-once="true"
