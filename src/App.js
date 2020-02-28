@@ -8,7 +8,6 @@ import * as palmDude from './images/palmDude.json';
 import * as success from './images/success.json';
 import FadeIn from 'react-fade-in';
 import Lottie from 'react-lottie';
-import * as footerLoading from './images/footerLoading.json';
 
 AOS.init();
 
