@@ -26,7 +26,46 @@ class Blog extends React.Component {
 					.toLowerCase();
 
 				return (
-					<Link to={`/blog/${cate}/${data.id}#navContainer`} key={index}>
+					<Link
+						to={`/blog/${cate}/${data.id}#navContainer`}
+						key={index}
+						className="blogArs"
+						id={`hel${index}`}
+					>
+						<div className="blogArticle">
+							<div className="blogArticleCategory">{data.kategoria}</div>
+							<div className="blogArticleHeader">{data.nazwa}</div>
+							<div className="blogArticleContent">{this.shorten(data.tekst, 300)}</div>
+							<div className="blogArticleDate">
+								<FontAwesomeIcon icon={faCalendarAlt} /> {data.data}
+								<FontAwesomeIcon icon={faExternalLinkAlt} />
+							</div>
+						</div>
+					</Link>
+				);
+			});
+
+		let blog2 = articles
+			.sort(function(a, b) {
+				return b.id - a.id;
+			})
+			.slice(1, 3)
+			.map((data, index) => {
+				let cate = data.kategoria
+					.replace(/\s+/g, '_')
+					.replace('ą', 'a')
+					.replace('ć', 'c')
+					.replace('ó', 'o')
+					.replace(/[^\w\s]/gi, '')
+					.toLowerCase();
+
+				return (
+					<Link
+						to={`/blog/${cate}/${data.id}#navContainer`}
+						key={index}
+						className="blogArs"
+						id={`helRes${index}`}
+					>
 						<div className="blogArticle">
 							<div className="blogArticleCategory">{data.kategoria}</div>
 							<div className="blogArticleHeader">{data.nazwa}</div>
@@ -72,7 +111,8 @@ class Blog extends React.Component {
 						</Link>
 					</div>
 					<div id="blogContentHeader2">najnowsze artykuły</div>
-					{blog}
+					<div id="blogGrid">{blog}</div>
+					<div id="blogRes">{blog2}</div>
 				</div>
 			</section>
 		);

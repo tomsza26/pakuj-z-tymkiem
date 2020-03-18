@@ -364,77 +364,91 @@ header {
 			}
 		}
 
-		a {
-			text-decoration: none;
-			flex: 1 0 25%;
+		#blogGrid,
+		#blogRes {
+			display: grid;
+			overflow: hidden;
+			grid-template-columns: repeat(3, 1fr);
+			grid-auto-rows: 1fr;
+			width: calc(100% - 232px);
 
-			.blogArticle {
-				margin: 10px 0 10px 10px;
-				padding: 7px 7px 0 7px;
-				border: 3px solid $secondColor;
-				min-height: 273px;
+			.blogArs {
 				text-decoration: none;
-				top: 0;
-				transition: 0.4s;
 				display: flex;
-				flex-direction: column;
-				position: relative;
 
-				.blogArticleCategory {
-					text-transform: uppercase;
-					font-family: $font3;
-					font-weight: 700;
-					color: #c6cf29;
+				.blogArticle {
+					margin: 10px 0 10px 10px;
+					padding: 7px 7px 0 7px;
+					border: 3px solid $secondColor;
+					min-height: 273px;
 					text-decoration: none;
-				}
+					top: 0;
+					transition: 0.4s;
+					display: flex;
+					flex-direction: column;
+					position: relative;
 
-				.blogArticleHeader {
-					font-family: $font3;
-					text-transform: uppercase;
-					font-size: 25px;
-					color: $secondColor;
-					text-decoration: none;
-				}
-
-				.blogArticleContent {
-					font-family: $font3;
-					color: #9eb881;
-					text-decoration: none;
-					flex-grow: 1;
-				}
-
-				.blogArticleDate {
-					padding: 6px 0 5px 0;
-					font-family: $font3;
-					font-weight: 700;
-					color: #9eb881;
-					align-self: flex-end;
-					text-decoration: none;
-					width: 100%;
-
-					svg:first-of-type {
-						padding-left: 3px;
+					.blogArticleCategory {
+						text-transform: uppercase;
+						font-family: $font3;
+						font-weight: 700;
+						color: #c6cf29;
+						text-decoration: none;
 					}
+
+					.blogArticleHeader {
+						font-family: $font3;
+						text-transform: uppercase;
+						font-size: 25px;
+						color: $secondColor;
+						text-decoration: none;
+					}
+
+					.blogArticleContent {
+						font-family: $font3;
+						color: #9eb881;
+						text-decoration: none;
+						flex-grow: 1;
+					}
+
+					.blogArticleDate {
+						padding: 6px 0 5px 0;
+						font-family: $font3;
+						font-weight: 700;
+						color: #9eb881;
+						align-self: flex-end;
+						text-decoration: none;
+						width: 100%;
+
+						svg:first-of-type {
+							padding-left: 3px;
+						}
+
+						svg:nth-of-type(2) {
+							float: right;
+							line-height: 14px;
+							vertical-align: middle;
+							transition: 0.4s;
+						}
+					}
+				}
+
+				.blogArticle:hover {
+					-webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
+					-moz-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
+					box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
+					top: -4px;
 
 					svg:nth-of-type(2) {
-						float: right;
-						line-height: 14px;
-						vertical-align: middle;
-						transition: 0.4s;
+						color: $thirdColor;
 					}
 				}
 			}
-
-			.blogArticle:hover {
-				-webkit-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
-				-moz-box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
-				box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.75);
-				top: -4px;
-
-				svg:nth-of-type(2) {
-					color: $thirdColor;
-				}
-			}
+		}
+		#blogRes {
+			display: none;
+			grid-template-columns: repeat(2, 1fr);
+			width: 100%;
 		}
 	}
 }
@@ -1216,8 +1230,16 @@ footer {
 @media screen and (max-width: 1000px) {
 	#blog {
 		#blogContainer {
-			a {
-				flex: 1 0 35%;
+			#blogGrid {
+				grid-template-columns: none;
+				grid-auto-rows: 0fr;
+				.blogArs:nth-of-type(2),
+				.blogArs:nth-of-type(3) {
+					display: none;
+				}
+			}
+			#blogRes {
+				display: grid;
 			}
 		}
 	}
@@ -1496,22 +1518,23 @@ footer {
 				}
 			}
 
-			a {
-				flex: 1 0 80%;
+			#blogGrid {
+				width: 100%;
+			}
 
-				.blogArticle {
-					margin: 10px 0 0 0;
-				}
+			#blogRes {
+				width: 100%;
+				grid-template-columns: repeat(1, 1fr);
 			}
 		}
 	}
+}
 
-	.PCont {
-		#PmetaCont {
-			.PmetaArticlesCont {
-				.PmetaArticle {
-					flex: 0 0 90%;
-				}
+.PCont {
+	#PmetaCont {
+		.PmetaArticlesCont {
+			.PmetaArticle {
+				flex: 0 0 90%;
 			}
 		}
 	}
