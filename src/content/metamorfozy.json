@@ -1,20 +1,29 @@
 [
-	{
-		"id": 1,
-		"osiagnieto": "6kg więcej",
-		"czas": "3 miesiące",
-		"obrazPrzed": "1Przed.jpg",
-		"obrazPo": "1Po.jpg",
-		"imie": "Iwo Bogajczyk",
-		"tekst": "Iwo jest dopiero na początku swojej transformacji. Efekty, które udało nam się osiągnąć po około 3 miesiącach są zadowalające i z pewnością motywują do dalszej pracy nad swoją sylwetką. Znacząca poprawa klatki, barków oraz ramion, przy czym tkanka tłuszczowa pozostaje na bardzo niskim poziomie. Wniosek: zbudowaliśmy około 6kg masy mięśniowej!"
-	},
-	{
-		"id": 2,
-		"osiagnieto": "8kg mniej",
-		"czas": "6 miesięcy",
-		"obrazPrzed": "2Przed.jpeg",
-		"obrazPo": "2Po.jpg",
-		"imie": "Gal Anonim",
-		"tekst": "Podopieczny, którego przedstawiam współpracuje ze mną on-line. Dlatego, ta metamorfoza wymagała sporej samodyscypliny i zawzięcia. Jak widać, udało się osiągnąć super efekty. W dniu dzisiejszym poziom tkanki tłuszczowej wynosi niecałe 10%!"
-	}
+  {
+    "id": 1,
+    "osiagnieto": "6kg więcej",
+    "czas": "3 miesiące",
+    "obrazPrzed": "1Przed.jpg",
+    "obrazPo": "1Po.jpg",
+    "imie": "Iwo Bogajczyk",
+    "tekst": "Iwo jest dopiero na początku swojej transformacji. Efekty, które udało nam się osiągnąć po około 3 miesiącach są zadowalające i z pewnością motywują do dalszej pracy nad swoją sylwetką. Znacząca poprawa klatki, barków oraz ramion, przy czym tkanka tłuszczowa pozostaje na bardzo niskim poziomie. Wniosek: zbudowaliśmy około 6kg masy mięśniowej!"
+  },
+  {
+    "id": 2,
+    "osiagnieto": "8kg mniej",
+    "czas": "6 miesięcy",
+    "obrazPrzed": "2Przed.jpeg",
+    "obrazPo": "2Po.jpg",
+    "imie": "Gal Anonim",
+    "tekst": "Podopieczny, którego przedstawiam współpracuje ze mną on-line. Dlatego, ta metamorfoza wymagała sporej samodyscypliny i zawzięcia. Jak widać, udało się osiągnąć super efekty. W dniu dzisiejszym poziom tkanki tłuszczowej wynosi niecałe 10%!"
+  },
+  {
+    "id": 3,
+    "osiagnieto": "10,5kg mniej",
+    "czas": "2,5 miesięca",
+    "obrazPrzed": "3Przed.jpg",
+    "obrazPo": "3Po.jpg",
+    "imie": "Marcin",
+    "tekst": "Marcin wykorzystał czas epidemii w bardzo produktywny sposób, co widać na załączonym obrazku. Po poważnej kontuzji nogi przybrał do ponad 100kg. Kiedy się ze mną skontaktował był bardzo zmotywowany i wiedział czego chce. Po dogłębnej analizie dotychczasowego stylu życia dobraliśmy odpowiedni trening oraz urozmaiconą dietę. Oprócz utraty wagi, znacznej poprawie uległo samopoczucie. Nasza współpraca trwa nadal, więc czekajcie na kolejną dawkę motywacji!"
+  }
 ]
