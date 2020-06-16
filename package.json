@@ -1,55 +1,55 @@
 {
-	"name": "tymek-nowak",
-	"homepage": "https://pakuj-z-tymkiem.pl",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.27",
-		"@fortawesome/free-brands-svg-icons": "^5.12.1",
-		"@fortawesome/free-regular-svg-icons": "^5.12.1",
-		"@fortawesome/free-solid-svg-icons": "^5.12.1",
-		"@fortawesome/react-fontawesome": "^0.1.8",
-		"@testing-library/jest-dom": "^4.2.4",
-		"@testing-library/react": "^9.4.0",
-		"@testing-library/user-event": "^7.2.1",
-		"aos": "^2.3.4",
-		"gh-pages": "^2.2.0",
-		"history": "^4.10.1",
-		"node-sass": "^4.13.1",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-fade-in": "^0.1.8",
-		"react-lottie": "^1.2.3",
-		"react-messenger-customer-chat": "^0.7.2",
-		"react-redux": "^7.1.3",
-		"react-router-dom": "^5.1.2",
-		"react-router-hash-link": "^1.2.2",
-		"react-scripts": "3.3.1",
-		"redux": "^4.0.5",
-		"sass": "^1.26.1",
-		"smoothscroll-polyfill": "^0.4.4"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build && copy build\\index.html build\\404.html",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "name": "tymek-nowak",
+  "homepage": "https://tomsza26.github.io/pakuj-z-tymkiem",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "aos": "^2.3.4",
+    "gh-pages": "^2.2.0",
+    "history": "^4.10.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-fade-in": "^0.1.8",
+    "react-lottie": "^1.2.3",
+    "react-messenger-customer-chat": "^0.7.2",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "3.3.1",
+    "redux": "^4.0.5",
+    "sass": "^1.26.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && copy build\\index.html build\\404.html",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
